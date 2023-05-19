@@ -38,7 +38,8 @@ export const updateTodo = async (req,res) => {
             id: req.params.id
         },
         data: {
-            item : req.body.item
+            item : req.body.item,
+            status: req.body.status
         }
     })
     res.json({data: updated})
