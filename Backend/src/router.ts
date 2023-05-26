@@ -9,7 +9,7 @@ router.get('/todos', getAllTodos)
 router.get('/todos/:id', getOneTodo)
 router.post('/todos', body('item').isString(), handleInputError,postTodo)
 router.put('/todos/:id',
-    body('item').isString(),
+    body('id').isString(),
     body('status').isString().optional(),
     updateTodo)
 router.delete('/todos/:id', deleteTodo)
